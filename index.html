@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            position: relative;
         }
         
         .container {
@@ -29,6 +30,27 @@
             padding: 30px;
             width: 100%;
             max-width: 900px;
+            position: relative;
+        }
+        
+        .wechat-public {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 10;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
         h1 {
@@ -195,11 +217,26 @@
             .result-label {
                 margin-bottom: 5px;
             }
+            
+            .wechat-public {
+                position: relative;
+                top: 0;
+                right: 0;
+                text-align: center;
+                margin-bottom: 15px;
+                display: inline-block;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 公众号信息 -->
+        <div class="wechat-public">
+            公众号：星火游戏社
+        </div>
+        
+	<h1>矿工小能手</h1>
         <h1>阵法图计算器</h1>
         <p class="description">在下方输入框中输入整数，系统将自动计算总产出、总成本和利润</p>
         
